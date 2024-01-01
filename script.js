@@ -29,21 +29,3 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }, 1000);
 });
-
-function createSnowflake() {
-  const snowflake = document.createElement('div');
-  snowflake.className = 'snowflake';
-  document.body.appendChild(snowflake);
-
-  const initialX = Math.random() * window.innerWidth;
-  snowflake.style.left = `${initialX}px`;
-
-  const duration = 5 + Math.random() * 5;
-  snowflake.style.animationDuration = `${duration}s`;
-
-  snowflake.addEventListener('animationiteration', () => {
-      document.body.removeChild(snowflake);
-  });
-}
-
-setInterval(createSnowflake, 500);

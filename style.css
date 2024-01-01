@@ -1,0 +1,166 @@
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background: url(image/fat.jpg) center/cover no-repeat;
+}
+
+.profile-container {
+    text-align: center;
+    padding: 30px;
+    border: 2px solid #343a40;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.1);
+}
+
+.profile-container img{
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.profile-container img:hover {
+    transform: rotate(360deg);
+}
+
+
+@keyframes colorChange{
+    0% {
+        color: red;
+    }
+    25% {
+        color: blue;
+    }
+    50% {
+        color: green;
+    }
+    75% {
+        color: orange;
+    }
+    100% {
+        color: red;
+    }
+}
+
+.color-changing-text {
+    font-size: 20px;
+    animation: colorChange 5s infinite;
+}
+
+@keyframes sideLeftRight {
+    0% {
+        transform: translate(0);
+    }
+    50%{
+        transform: translateX(-10px);
+    }
+    100%{
+        transform: translateX(10px);
+    }
+}
+
+.text-contact {
+    font-size: 15px;
+    font-style: italic;
+    animation: sideLeftRight 4s infinite alternate;
+}
+
+.contact-link {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    padding: 8px 16px;
+    border: 2px solid #343a40;
+    border-radius: 5px;
+    color: #343a40;
+    transition: background-color 0.3s ease;
+}
+
+.icon {
+    width: 15px;
+    height: 15px;
+    margin-right: 3px;
+}
+
+.contact-link:hover {
+    background-color: #b4b4b4;
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+.contact-link span {
+    font-size: 16px; 
+    margin-left: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    color: #ffffff;
+    border-radius: 10px;
+    transition: font-size 0.3s ease-in-out;
+}
+
+footer:hover {
+    font-size: 15px;
+}
+
+footer p {
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+footer p {
+    color: #ffffff;
+}
+
+@keyframes snowfall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+    }
+}
+
+.snowflake {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    animation: snowfall linear infinite;
+    animation-duration: 5s;
+    pointer-events: none; 
+}
+
+.snowflake:nth-child(1) {
+    left: 5%;
+    animation-delay: 0s;
+}
+
+.snowflake:nth-child(2) {
+    left: 15%;
+    animation-delay: 1s;
+}
+
+.snowflake:nth-child(3) {
+    left: 25%;
+    animation-delay: 2s;
+}
+
+.countdown {
+    text-align: center;
+    font-size: 15px;
+    color: #ffffff;
+    transition: font-size 0.3s ease-in-out;
+}
+
+.countdown:hover {
+    font-size: 18px;
+}

@@ -119,41 +119,6 @@ footer p {
     color: #ffffff;
 }
 
-@keyframes snowfall {
-    0% {
-        transform: translateY(0) rotate(0deg);
-    }
-    100% {
-        transform: translateY(100vh) rotate(360deg);
-    }
-}
-
-.snowflake {
-    position: fixed;
-    width: 10px;
-    height: 10px;
-    background-color: #fff;
-    border-radius: 50%;
-    animation: snowfall linear infinite;
-    animation-duration: 5s;
-    pointer-events: none; 
-}
-
-.snowflake:nth-child(1) {
-    left: 5%;
-    animation-delay: 0s;
-}
-
-.snowflake:nth-child(2) {
-    left: 15%;
-    animation-delay: 1s;
-}
-
-.snowflake:nth-child(3) {
-    left: 25%;
-    animation-delay: 2s;
-}
-
 .countdown {
     text-align: center;
     font-size: 15px;
